@@ -1,0 +1,2 @@
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Debug\Projekt_Snake.exe
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Debug\Projekt_Snake.pdb
