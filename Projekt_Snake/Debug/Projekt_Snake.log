@@ -1,2 +1,48 @@
-﻿  Main.cpp
+﻿  Engine.cpp
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.h(13,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(6,60): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(6,43): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Main.cpp
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.h(13,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Menu.cpp
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.h(13,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Menu.cpp(27,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Menu.cpp(27,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Menu.cpp(35,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Menu.cpp(35,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Menu.cpp(43,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Menu.cpp(43,41): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Generating Code...
   Projekt_Snake.vcxproj -> D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Debug\Projekt_Snake.exe

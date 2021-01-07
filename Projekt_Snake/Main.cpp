@@ -3,62 +3,11 @@
 #include <iostream>
 #include "Snake.h"
 #include "Menu.h"
+#include "Engine.h"
 
-int main(){
-
-    sf::RenderWindow window(sf::VideoMode(1680, 1050), "Snake");           //Okno
-    Menu menu(window.getSize().x, window.getSize().y);                     //Menu
-
-    while (window.isOpen()){
-
-        sf::Event event;
-
-        while (window.pollEvent(event)) {
-
-            //---------------------------- Przyciski Menu--------------------------
-            switch (event.type) {
-
-            case sf::Event::KeyPressed:
-
-                switch (event.key.code) {
-
-                case sf::Keyboard::Up:                            //Strza³ka w górê
-                    menu.moveUp();
-                    std::cout << "Up" << std::endl;
-                    break;
-
-                case sf::Keyboard::Down:                          //Strza³ka w dó³
-                    menu.moveDown();
-                    std::cout << "Down" << std::endl;
-                    break;
-
-                case sf::Keyboard::Return:                        //Wybranie opcji
-                    switch (menu.Pressed()) {
-                    case 0:
-                        std::cout << "New Game" << std::endl;
-                        break;
-                    case 1:
-                        std::cout << "Settings" << std::endl;
-                        break;
-                    case 2:
-                        std::cout << "Exit" << std::endl;
-                        window.close();
-                        break;
-                    }
-                }
-            };
-            //-------------------------------------------------------------------
-
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            };
-
-        };
-        window.clear();             //Czyszczenie okna
-        menu.draw(window);          //Menu
-        window.display();           //Wyœwietlanie okna
-    }
-}
+int main() {
+    Engine game;
+};
 
 /*
 
@@ -87,4 +36,61 @@ int main(){
             << mode.bitsPerPixel << " bpp" << std::endl;
     }
     //-------------------------------------------------------------------------
-*/
+*/    //game.run();
+
+/*
+sf::RenderWindow window;
+window.create(sf::VideoMode(1680, 1050), "Okno");                      //Okno
+Menu menu(window.getSize().x, window.getSize().y);                     //Menu
+
+while (window.isOpen()){
+
+    sf::Event event;
+
+    while (window.pollEvent(event)) {
+
+        //---------------------------- Przyciski Menu--------------------------
+        switch (event.type) {
+
+        case sf::Event::KeyPressed:
+
+            switch (event.key.code) {
+
+            case sf::Keyboard::Up:                            //Strza³ka w górê
+                menu.moveUp();
+                std::cout << "Up" << std::endl;
+                break;
+
+            case sf::Keyboard::Down:                          //Strza³ka w dó³
+                menu.moveDown();
+                std::cout << "Down" << std::endl;
+                break;
+
+            case sf::Keyboard::Return:                        //Wybranie opcji
+                switch (menu.Pressed()) {
+                case 0:
+                    std::cout << "New Game" << std::endl;
+                    window.setVisible(false);
+                    game.run();
+                    break;
+                case 1:
+                    std::cout << "Settings" << std::endl;
+                    break;
+                case 2:
+                    std::cout << "Exit" << std::endl;
+                    window.close();
+                    break;
+                }
+            }
+        };
+        //-------------------------------------------------------------------
+
+        if (event.type == sf::Event::Closed) {
+            window.close();
+        };
+
+    };
+    window.clear();             //Czyszczenie okna
+    menu.draw(window);          //Menu
+    window.display();           //Wyœwietlanie okna
+}*/

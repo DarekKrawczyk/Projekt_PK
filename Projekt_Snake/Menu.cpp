@@ -23,20 +23,23 @@ Menu::Menu(int width, int height){
 	menu[0].setString("New Game");
 	menu[0].setCharacterSize(rozmiar_menu);
 	menu[0].setFillColor(sf::Color::Red);
+	menu[0].setOrigin(menu[0].getLocalBounds().width/2, menu[0].getLocalBounds().height/2);
 	menu[0].setPosition(sf::Vector2f(width / 2, height / (ilosc_opcji + 1) * 1));
 
 	//Przycisk Settings
 	menu[1].setFont(font);
 	menu[1].setString("Settings");
-	menu[0].setCharacterSize(rozmiar_menu);
+	menu[1].setCharacterSize(rozmiar_menu);
 	menu[1].setFillColor(sf::Color::White);
+	menu[1].setOrigin(menu[1].getLocalBounds().width / 2, menu[1].getLocalBounds().height / 2);
 	menu[1].setPosition(sf::Vector2f(width / 2, height / (ilosc_opcji + 1) * 2));
 
 	//Przycisk Exit
 	menu[2].setFont(font);
 	menu[2].setString("Exit");
-	menu[0].setCharacterSize(rozmiar_menu);
+	menu[2].setCharacterSize(rozmiar_menu);
 	menu[2].setFillColor(sf::Color::White);
+	menu[2].setOrigin(menu[2].getLocalBounds().width / 2, menu[2].getLocalBounds().height / 2);
 	menu[2].setPosition(sf::Vector2f(width / 2, height / (ilosc_opcji + 1) * 3));
 
 	wybrany = 0;
@@ -51,9 +54,16 @@ void Menu::draw(sf::RenderWindow& window){
 	for (int i = 0; i < ilosc_opcji; ++i) {
 		window.draw(menu[i]);
 	}
-	music.play();
-	music.setVolume(2);
-	music.setLoop(true);
+
+	/*
+	if (muzyka == false) {
+		music.play();
+		music.setVolume(2);
+		music.setLoop(true);
+	}
+
+	muzyka = true;
+	*/
 }
 
 void Menu::moveUp(){
