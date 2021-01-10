@@ -12,7 +12,7 @@ public:
 	sf::Vector2f getPoss();						//Zwrócenie pozycji cia³a wê¿a
 	sf::RectangleShape getBody();				//Zwrócenie segmentu cia³a wê¿a
 	void setPoss(sf::Vector2f newPoss);			//Uswanienie nowej pozycji
-	void update();								//Update cia³a wzglêdem pozycji
+	void update();								//Update pozycji
 
 };
 

@@ -4,7 +4,7 @@
 Menu::Menu(int width, int height){
 
 	//Pobranie czcionki
-	if (!font.loadFromFile("C:\\Windows\\Fonts\\Lucon.ttf")){
+	if (!font.loadFromFile("yoster.ttf")){
 		std::cout << "Error pobrania czcionki" << std::endl;
 	};
 
@@ -17,6 +17,20 @@ Menu::Menu(int width, int height){
 	if (!music.openFromFile("menu_music.ogg")) {
 		std::cout << "Error pobrania muzyki menu" << std::endl;
 	};
+
+	//Pobieranie dzwiêku przejscia w menu
+	if (!buffer.loadFromFile("menu_switch.wav")) {
+		std::cout << "Error pobrania muzyki menu switch" << std::endl;
+	};
+
+	//Pobieranie bufferu do d¿wiêku przejœcia w menu
+	sound.setBuffer(buffer);
+	sound.setVolume(5);
+
+	//Odtwarzenie muzyki w menu
+	music.play();
+	music.setVolume(2);
+	music.setLoop(true);
 
 	//Przycisk New Game
 	menu[0].setFont(font); 
@@ -54,16 +68,6 @@ void Menu::draw(sf::RenderWindow& window){
 	for (int i = 0; i < ilosc_opcji; ++i) {
 		window.draw(menu[i]);
 	}
-
-	/*
-	if (muzyka == false) {
-		music.play();
-		music.setVolume(2);
-		music.setLoop(true);
-	}
-
-	muzyka = true;
-	*/
 }
 
 void Menu::moveUp(){
@@ -71,6 +75,7 @@ void Menu::moveUp(){
 		menu[wybrany].setFillColor(sf::Color::White);
 		wybrany--;
 		menu[wybrany].setFillColor(sf::Color::Red);
+		sound.play();
 	}
 }
 
@@ -79,5 +84,6 @@ void Menu::moveDown(){
 		menu[wybrany].setFillColor(sf::Color::White);
 		wybrany++;
 		menu[wybrany].setFillColor(sf::Color::Red);
+		sound.play();
 	}
 }

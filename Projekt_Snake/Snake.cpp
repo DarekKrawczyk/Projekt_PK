@@ -4,6 +4,7 @@ Snake::Snake(sf::Vector2f StartPos) {
 	body.setSize(sf::Vector2f(40, 40));
 	body.setFillColor(sf::Color::Green);
 	body.setPosition(StartPos);
+	pozycja = StartPos;
 }
 
 Snake::~Snake() {
