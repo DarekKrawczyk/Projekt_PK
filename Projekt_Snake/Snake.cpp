@@ -1,27 +1,33 @@
 #include "Snake.h"
 
-Snake::Snake(sf::Vector2f StartPos) {
-	body.setSize(sf::Vector2f(40, 40));
-	body.setFillColor(sf::Color::Green);
-	body.setPosition(StartPos);
-	pozycja = StartPos;
+///
+///konstruktor 
+/// 
+Snake::Snake(sf::Vector2f StartPos, sf::Color color) {
+	snake_shape.setSize(sf::Vector2f(40, 40));
+	snake_shape.setFillColor(color);
+	snake_shape.setPosition(StartPos);
+	snake_shape.setOutlineColor(sf::Color::Black);
+	snake_shape.setOutlineThickness(2);
+	snake_poss = StartPos;
 }
 
+///
+///Destruktor
+/// 
 Snake::~Snake() {
 }
 
-sf::Vector2f Snake::getPoss() {
-	return pozycja;
-}
-
-sf::RectangleShape Snake::getBody() {
-	return body;
-}
-
+///
+///Ustawianie pozycji wektora
+/// 
 void Snake::setPoss(sf::Vector2f newPoss) {
-	pozycja = newPoss;
+	snake_poss = newPoss;
 }
 
+///
+///Update pozycji sengmentu cia³a
+/// 
 void Snake::update() {
-	body.setPosition(pozycja);
+	snake_shape.setPosition(snake_poss);
 }

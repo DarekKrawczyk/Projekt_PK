@@ -6,10 +6,10 @@
 class Menu{
 private:
 	int rozmiar_menu = 72;							//Rozmiar czcionki w menu
-	int ilosc_opcji = 3;							//Ilosc pozycji w menu
+	int ilosc_opcji = 2;							//Ilosc pozycji w menu
 	int wybrany;									//Numer wybranej pozycji
 	sf::Font font;									//Czcionka
-	sf::Text menu[3];								//Pozycje w menu
+	sf::Text menu[2];								//Pozycje w menu
 	sf::Texture texture;							//Tekstura t³a
 	sf::SoundBuffer buffer;							//Za³adowanie dziwiêku zmiany opcji w menu do bufferu
 	sf::Sound sound;								//Zmienna korzystaj¹ca z bufferu

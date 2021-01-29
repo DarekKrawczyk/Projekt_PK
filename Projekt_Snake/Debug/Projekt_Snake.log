@@ -1,15 +1,86 @@
 ﻿  Engine.cpp
-D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.h(14,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(6,60): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(12,60): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
           with
           [
               T=float
           ]
-D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(6,43): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(12,43): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
           with
           [
               T=float
           ]
-D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(160,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(210,27): warning C4018: '<': signed/unsigned mismatch
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(56,148): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(72,140): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(449,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(450,43): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(456,46): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(457,49): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(503,54): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(581,27): warning C4018: '<': signed/unsigned mismatch
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(602,27): warning C4018: '<': signed/unsigned mismatch
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(691,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(745,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(745,40): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(746,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(746,40): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(781,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(781,40): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(782,54): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Engine.cpp(782,40): warning C4244: '=': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
   Projekt_Snake.vcxproj -> D:\Zakład\PK\Projekt_PK\Projekt_PK\Projekt_Snake\Debug\Projekt_Snake.exe

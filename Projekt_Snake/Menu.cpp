@@ -3,58 +3,66 @@
 
 Menu::Menu(int width, int height){
 
-	//Pobranie czcionki
+	///
+	///Pobranie czcionki
+	///
 	if (!font.loadFromFile("yoster.ttf")){
-		std::cout << "Error pobrania czcionki" << std::endl;
+		std::cout << "Error pobrania czcionki -yoster.ttf-" << std::endl;
 	};
 
-	//Pobranie t³a menu
-	if (!texture.loadFromFile("snake_1.png")) {
-		std::cout << "Error pobrania tla" << std::endl;
+	///
+	///Pobranie t³a menu
+	///
+	if (!texture.loadFromFile("snake_2.png")) {
+		std::cout << "Error pobrania tla -snake_2.png-" << std::endl;
 	};
 
-	//Pobranie muzyki t³a
+	///
+	///Pobranie muzyki t³a
+	///
 	if (!music.openFromFile("menu_music.ogg")) {
-		std::cout << "Error pobrania muzyki menu" << std::endl;
+		std::cout << "Error pobrania muzyki -menu_music.ogg-" << std::endl;
 	};
+	///
+	///Muzyczka w tle
+	///
+	music.play();
+	music.setVolume(5);
+	music.setLoop(true);
 
-	//Pobieranie dzwiêku przejscia w menu
+	///
+	///DŸwiêk przejœcia pomiêdzy opcjami menu
+	///
 	if (!buffer.loadFromFile("menu_switch.wav")) {
-		std::cout << "Error pobrania muzyki menu switch" << std::endl;
+		std::cout << "Error pobrania dzwieku -menu_switch.wav-" << std::endl;
 	};
-
-	//Pobieranie bufferu do d¿wiêku przejœcia w menu
+	///
+	///Zapisanie bufferu dŸwiêku do zmiennej sound
+	///
 	sound.setBuffer(buffer);
 	sound.setVolume(5);
 
-	//Odtwarzenie muzyki w menu
-	music.play();
-	music.setVolume(2);
-	music.setLoop(true);
-
-	//Przycisk New Game
+	///
+	///Przycisk New Game
+	///
 	menu[0].setFont(font); 
 	menu[0].setString("New Game");
 	menu[0].setCharacterSize(rozmiar_menu);
 	menu[0].setFillColor(sf::Color::Red);
-	menu[0].setOrigin(menu[0].getLocalBounds().width/2, menu[0].getLocalBounds().height/2);
-	menu[0].setPosition(sf::Vector2f(width / 2, height / (ilosc_opcji + 1) * 1));
+	menu[0].setPosition(sf::Vector2f(width / 2 - menu[0].getLocalBounds().width / 2, height / (2 + 1) * 1));
+	menu[0].setOutlineColor(sf::Color::Black);
+	menu[0].setOutlineThickness(10);
 
-	//Przycisk Settings
+	///
+	///Przycisk Exit
+	///
 	menu[1].setFont(font);
-	menu[1].setString("Settings");
+	menu[1].setString("Exit");
 	menu[1].setCharacterSize(rozmiar_menu);
 	menu[1].setFillColor(sf::Color::White);
-	menu[1].setOrigin(menu[1].getLocalBounds().width / 2, menu[1].getLocalBounds().height / 2);
-	menu[1].setPosition(sf::Vector2f(width / 2, height / (ilosc_opcji + 1) * 2));
-
-	//Przycisk Exit
-	menu[2].setFont(font);
-	menu[2].setString("Exit");
-	menu[2].setCharacterSize(rozmiar_menu);
-	menu[2].setFillColor(sf::Color::White);
-	menu[2].setOrigin(menu[2].getLocalBounds().width / 2, menu[2].getLocalBounds().height / 2);
-	menu[2].setPosition(sf::Vector2f(width / 2, height / (ilosc_opcji + 1) * 3));
+	menu[1].setPosition(sf::Vector2f(width / 2 - menu[1].getLocalBounds().width / 2, height / (2 + 1) * 2));
+	menu[1].setOutlineColor(sf::Color::Black);
+	menu[1].setOutlineThickness(10);
 
 	wybrany = 0;
 }
@@ -62,7 +70,13 @@ Menu::Menu(int width, int height){
 Menu::~Menu(){
 }
 
+///
+///Rysowanie opcji do klikniêcia na ekranie
+///
 void Menu::draw(sf::RenderWindow& window){
+	///
+	///Tekstura t³a
+	///
 	sf::Sprite background(texture);
 	window.draw(background);
 	for (int i = 0; i < ilosc_opcji; ++i) {
@@ -70,6 +84,9 @@ void Menu::draw(sf::RenderWindow& window){
 	}
 }
 
+///
+///Ruch do góry w menu
+///
 void Menu::moveUp(){
 	if (wybrany - 1 >= 0) {
 		menu[wybrany].setFillColor(sf::Color::White);
@@ -79,6 +96,9 @@ void Menu::moveUp(){
 	}
 }
 
+///
+///Ruch na dó³ w menu
+///
 void Menu::moveDown(){
 	if (wybrany + 1 < ilosc_opcji) {
 		menu[wybrany].setFillColor(sf::Color::White);
